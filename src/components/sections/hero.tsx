@@ -72,14 +72,14 @@ const slots: Slot[] = [
   { rotate: -2, translate: [-8, 8], zIndex: 30 },
 ];
 
-const ROTATE_INTERVAL_MS = 3500;
+const ROTATE_INTERVAL_MS = 1000;
 
 function SpendCard({ content, slot }: { content: SpendCardContent; slot: Slot }) {
   const Icon = content.icon === "calendar" ? CalendarIcon : UsersIcon;
 
   return (
     <div
-      className="absolute left-0 top-0 flex size-[450px] origin-top-left flex-col items-start gap-8 rounded-2xl border-t border-t-[#F1F1F1] bg-white p-10 shadow-[0_2px_25px_rgba(0,0,0,0.2)] transition-transform duration-700 ease-in-out"
+      className="absolute left-0 top-0 flex size-[450px] origin-top-left flex-col items-start gap-8 rounded-2xl border-t border-t-[#F1F1F1] bg-white p-10 shadow-[0_2px_25px_rgba(0,0,0,0.2)] transition-transform duration-500 ease-out"
       style={{
         transform: `rotate(${slot.rotate}deg) translate(${slot.translate[0]}px, ${slot.translate[1]}px)`,
         zIndex: slot.zIndex,
@@ -150,9 +150,12 @@ export function Hero() {
         </div>
 
         <div className="relative size-[450px] shrink-0 scale-[0.62] animate-[fade-up_0.8s_ease-out_0.15s_both] sm:scale-[0.8] lg:scale-100">
-          {slots.map((slot, slotIndex) => {
-            const content = cardContents[(slotIndex + offset) % cardContents.length];
-            return <SpendCard key={content.id} content={content} slot={slot} />;
+          {cardContents.map((content, cardIndex) => {
+            // Render cards in a fixed, stable order so React never reorders
+            // the underlying DOM nodes — only the slot (and its CSS
+            // transition) changes, which keeps the motion smooth.
+            const slotIndex = (((cardIndex - offset) % slots.length) + slots.length) % slots.length;
+            return <SpendCard key={content.id} content={content} slot={slots[slotIndex]} />;
           })}
         </div>
       </div>
