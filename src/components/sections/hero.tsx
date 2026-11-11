@@ -72,14 +72,14 @@ const slots: Slot[] = [
   { rotate: -2, translate: [-8, 8], zIndex: 30 },
 ];
 
-const ROTATE_INTERVAL_MS = 1000;
+const ROTATE_INTERVAL_MS = 2000;
 
 function SpendCard({ content, slot }: { content: SpendCardContent; slot: Slot }) {
   const Icon = content.icon === "calendar" ? CalendarIcon : UsersIcon;
 
   return (
     <div
-      className="absolute left-0 top-0 flex size-[450px] origin-top-left flex-col items-start gap-8 rounded-2xl border-t border-t-[#F1F1F1] bg-white p-10 shadow-[0_2px_25px_rgba(0,0,0,0.2)] transition-transform duration-500 ease-out"
+      className="pointer-events-none absolute left-0 top-0 flex size-[450px] origin-top-left flex-col items-start gap-8 rounded-2xl border-t border-t-[#F1F1F1] bg-white p-10 shadow-[0_2px_25px_rgba(0,0,0,0.2)] transition-transform duration-1000 ease-out"
       style={{
         transform: `rotate(${slot.rotate}deg) translate(${slot.translate[0]}px, ${slot.translate[1]}px)`,
         zIndex: slot.zIndex,
