@@ -131,7 +131,7 @@ export function Hero() {
   return (
     <section className="flex min-h-screen w-full flex-col items-center justify-center gap-12 bg-white px-6 pb-20 pt-28 md:px-10">
       <div className="mx-auto flex w-full max-w-[1150px] flex-col items-center justify-center gap-16 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
-        <div className="flex max-w-xl animate-[fade-up_0.7s_ease-out_both] flex-col items-start gap-9 text-center lg:text-left">
+        <div className="flex max-w-xl animate-[fade-up_0.7s_ease-out_both] flex-col items-center gap-9 text-center lg:items-start lg:text-left">
           <div className="flex flex-col items-center gap-1 lg:items-start">
             <h1 className="text-[44px] font-medium leading-[0.95] tracking-[-0.06em] text-black sm:text-[60px] lg:text-[78px]">
               Know where your money goes
