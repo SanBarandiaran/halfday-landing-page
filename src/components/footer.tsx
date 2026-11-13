@@ -1,14 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { LogoMark } from "@/components/icons";
 
 const links = [
   { label: "Product", href: "#" },
   { label: "How it works", href: "#" },
   { label: "Pricing", href: "#" },
-  { label: "Privacy", href: "#" },
-  { label: "Terms", href: "#" },
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" },
 ];
 
 export function Footer() {
@@ -37,13 +38,13 @@ export function Footer() {
 
           <nav className="flex flex-wrap items-center gap-x-8 gap-y-2">
             {links.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="text-lg font-medium text-white transition-colors hover:text-white/60"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>
