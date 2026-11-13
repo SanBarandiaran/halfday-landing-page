@@ -5,9 +5,9 @@ import Link from "next/link";
 import { LogoMark } from "@/components/icons";
 
 const links = [
-  { label: "Product", href: "#" },
-  { label: "How it works", href: "#" },
-  { label: "Pricing", href: "#" },
+  { label: "Product", href: "/#product" },
+  { label: "How it works", href: "/#how-it-works" },
+  { label: "Pricing", href: "/#pricing" },
   { label: "Privacy", href: "/privacy" },
   { label: "Terms", href: "/terms" },
 ];

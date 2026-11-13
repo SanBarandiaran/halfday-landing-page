@@ -19,7 +19,10 @@ const renewals: Renewal[] = [
 
 export function Renewals() {
   return (
-    <section className="flex w-full flex-col items-center bg-[#F2F2F2] px-6 py-20 md:px-10 md:py-28">
+    <section
+      id="how-it-works"
+      className="flex w-full scroll-mt-24 flex-col items-center bg-[#F2F2F2] px-6 py-20 md:px-10 md:py-28"
+    >
       <div className="flex w-full max-w-[1240px] flex-col gap-16 md:gap-24">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row">
           <h2 className="max-w-xl text-[40px] font-medium leading-[0.95] tracking-[-0.06em] text-black sm:text-[56px] lg:text-[72px]">

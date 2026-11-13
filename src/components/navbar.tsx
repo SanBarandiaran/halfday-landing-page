@@ -1,9 +1,9 @@
 import { ArrowUpRightIcon, LogoMark } from "@/components/icons";
 
 const navLinks = [
-  { label: "Product", href: "#" },
-  { label: "How it works", href: "#" },
-  { label: "Pricing", href: "#" },
+  { label: "Product", href: "/#product" },
+  { label: "How it works", href: "/#how-it-works" },
+  { label: "Pricing", href: "/#pricing" },
 ];
 
 export function Navbar() {
