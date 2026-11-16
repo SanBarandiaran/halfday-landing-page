@@ -132,7 +132,7 @@ export function Calculator() {
             </h3>
             <p
               key={dayRate}
-              className="animate-[pop-in_0.25s_ease-out] font-[family-name:var(--font-halfday-display-bold)] text-[56px] leading-[1.2] font-bold text-[#F1AF55] sm:text-[72px] lg:text-[88px]"
+              className="origin-center animate-[pop-in_0.35s_ease-out] font-[family-name:var(--font-halfday-display-bold)] text-[56px] leading-[1.2] font-bold text-[#F1AF55] sm:text-[72px] lg:text-[88px]"
             >
               ${dayRate.toLocaleString()}
             </p>
