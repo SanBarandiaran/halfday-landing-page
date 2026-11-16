@@ -18,7 +18,7 @@ export function Footer() {
         <span className="font-[family-name:var(--font-halfday-display-bold)] text-xl leading-[1.2] font-bold text-black">
           HALFDAY.
         </span>
-        <span className="font-[family-name:var(--font-halfday-body)] text-sm leading-tight text-black">
+        <span className="font-[family-name:var(--font-halfday-body)] text-sm leading-tight text-black/50">
           Made for freelancers who are done guessing.
         </span>
       </div>
