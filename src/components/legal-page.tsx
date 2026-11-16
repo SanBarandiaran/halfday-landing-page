@@ -22,7 +22,7 @@ export function LegalPage({ title, updated, sections }: LegalPageProps) {
             {title}
           </h1>
           <p className="font-[family-name:var(--font-halfday-body)] text-sm text-black/50">Last updated: {updated}</p>
-          <p className="font-[family-name:var(--font-halfday-body)] rounded-lg bg-[#F2F2F2] px-4 py-3 text-sm leading-6 text-black/70">
+          <p className="font-[family-name:var(--font-halfday-body)] rounded-lg bg-[#F1AF55] px-4 py-3 text-sm leading-6 text-black/70">
             This is placeholder content for development purposes and does not constitute real legal terms. Replace
             it with your own policy before launch.
           </p>
