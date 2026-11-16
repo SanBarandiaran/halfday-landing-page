@@ -38,8 +38,11 @@ export function Calculator() {
         </ShakeOnce>
       </Reveal>
 
-      <Reveal delay={100} className="flex w-full max-w-xl flex-col items-stretch gap-7 sm:gap-8">
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
+      <Reveal
+        delay={100}
+        className="grid w-full max-w-xl grid-cols-1 gap-7 sm:grid-cols-[auto_1fr] sm:items-center sm:gap-x-6 sm:gap-y-8"
+      >
+        <div className="flex flex-col gap-2 sm:contents">
           <label
             htmlFor="take-home"
             className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black sm:text-2xl lg:text-[36px]"
@@ -60,7 +63,7 @@ export function Calculator() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
+        <div className="flex flex-col gap-2 sm:contents">
           <label
             htmlFor="costs"
             className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black sm:text-2xl lg:text-[36px]"
@@ -81,7 +84,7 @@ export function Calculator() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
+        <div className="flex flex-col gap-2 sm:contents">
           <label
             htmlFor="weeks-off"
             className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black sm:text-2xl lg:text-[36px]"
@@ -102,7 +105,7 @@ export function Calculator() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
+        <div className="flex flex-col gap-2 sm:contents">
           <label
             htmlFor="days-per-week"
             className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black sm:text-2xl lg:text-[36px]"
@@ -145,7 +148,7 @@ export function Calculator() {
           </p>
         </div>
 
-        <p className="font-[family-name:var(--font-halfday-body)] text-base leading-tight font-medium text-black sm:text-lg lg:text-[22px]">
+        <p className="font-[family-name:var(--font-halfday-body)] text-base leading-tight font-medium text-black/50 sm:text-lg lg:text-[22px]">
           *software, gear, insurance, accountant
         </p>
       </Reveal>
