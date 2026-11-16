@@ -12,9 +12,9 @@ function clamp(value: number, min: number, max: number) {
 }
 
 export function Calculator() {
-  const [takeHome, setTakeHome] = useState(60000);
-  const [costs, setCosts] = useState(6000);
-  const [weeksOff, setWeeksOff] = useState(4);
+  const [takeHome, setTakeHome] = useState(90000);
+  const [costs, setCosts] = useState(9000);
+  const [weeksOff, setWeeksOff] = useState(6);
   const [daysPerWeek, setDaysPerWeek] = useState(4);
 
   const { dayRate, hourlyRate } = useMemo(() => {
