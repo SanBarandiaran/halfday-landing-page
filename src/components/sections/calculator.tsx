@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { CalculatorGlyphIcon } from "@/components/icons";
 import { Reveal } from "@/components/reveal";
+import { ShakeOnce } from "@/components/shake-once";
 import { halfdayBody, halfdayDisplayBold } from "@/lib/fonts";
 
 function clamp(value: number, min: number, max: number) {
@@ -32,7 +33,9 @@ export function Calculator() {
         <h2 className="font-[family-name:var(--font-halfday-display-bold)] text-[40px] leading-[1.2] font-bold text-black sm:text-[56px] lg:text-[80px]">
           Your numbers
         </h2>
-        <CalculatorGlyphIcon className="size-10 shrink-0 sm:size-14 lg:size-[83px]" />
+        <ShakeOnce>
+          <CalculatorGlyphIcon className="size-10 shrink-0 sm:size-14 lg:size-[83px]" />
+        </ShakeOnce>
       </Reveal>
 
       <Reveal delay={100} className="flex w-full max-w-xl flex-col items-stretch gap-7 sm:gap-8">

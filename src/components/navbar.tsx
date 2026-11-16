@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { CloseIcon, MenuIcon } from "@/components/icons";
+import { ShakeOnce } from "@/components/shake-once";
 import { halfdayBody, halfdayDisplayBold } from "@/lib/fonts";
 
 const navLinks = [
@@ -78,7 +79,9 @@ export function Navbar() {
           aria-label={open ? "Close menu" : "Open menu"}
           className="flex size-10 shrink-0 items-center justify-center rounded-full text-black transition-colors hover:bg-black/5 lg:hidden"
         >
-          {open ? <CloseIcon className="size-6" /> : <MenuIcon className="size-6" />}
+          <ShakeOnce key={open ? "close" : "menu"}>
+            {open ? <CloseIcon className="size-6" /> : <MenuIcon className="size-6" />}
+          </ShakeOnce>
         </button>
       </div>
 

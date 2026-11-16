@@ -1,5 +1,6 @@
 import { ArrowRightIcon, LinkIcon } from "@/components/icons";
 import { Reveal } from "@/components/reveal";
+import { ShakeOnce } from "@/components/shake-once";
 import { halfdayBody, halfdayDisplayBold } from "@/lib/fonts";
 
 const faqs = [
@@ -40,13 +41,17 @@ export function Faq() {
         <h2 className="font-[family-name:var(--font-halfday-display-bold)] text-[32px] leading-[1.2] font-bold text-black sm:text-[48px] lg:text-[60px]">
           FAQ
         </h2>
-        <LinkIcon className="size-6 shrink-0 sm:size-8 lg:size-[58px]" />
+        <ShakeOnce>
+          <LinkIcon className="size-6 shrink-0 sm:size-8 lg:size-[58px]" />
+        </ShakeOnce>
       </Reveal>
 
       <div className="-rotate-[1deg] flex w-full max-w-3xl flex-col gap-8 sm:gap-10">
         {faqs.map((item, index) => (
           <Reveal key={item.question} delay={index * 80} className={`flex items-start gap-3 ${item.indent ? "sm:pl-5" : ""}`}>
-            <ArrowRightIcon className="mt-1 size-7 shrink-0 text-black transition-transform duration-300 sm:size-9 lg:size-12" />
+            <ShakeOnce className="mt-1">
+              <ArrowRightIcon className="size-7 shrink-0 text-black transition-transform duration-300 sm:size-9 lg:size-12" />
+            </ShakeOnce>
             <div className="flex flex-col items-start">
               <p className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-semibold text-black sm:text-2xl lg:text-[32px]">
                 {item.question}

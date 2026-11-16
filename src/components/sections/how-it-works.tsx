@@ -1,5 +1,6 @@
 import { LightningIcon } from "@/components/icons";
 import { Reveal } from "@/components/reveal";
+import { ShakeOnce } from "@/components/shake-once";
 import { halfdayBody, halfdayDisplayBold } from "@/lib/fonts";
 
 export function HowItWorks() {
@@ -13,7 +14,9 @@ export function HowItWorks() {
           <span className="font-[family-name:var(--font-halfday-display-bold)] text-[36px] leading-[1.2] font-bold text-black sm:text-[56px] lg:text-[80px]">
             How HALFDAY
           </span>
-          <LightningIcon className="size-9 rotate-[12deg] shrink-0 sm:size-12 lg:size-[90px]" />
+          <ShakeOnce>
+            <LightningIcon className="size-9 rotate-[12deg] shrink-0 sm:size-12 lg:size-[90px]" />
+          </ShakeOnce>
           <span className="font-[family-name:var(--font-halfday-display-bold)] text-[36px] leading-[1.2] font-bold text-black sm:text-[56px] lg:text-[80px]">
             works
           </span>

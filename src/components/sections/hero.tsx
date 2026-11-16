@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PercentCutIcon, SquiggleIcon } from "@/components/icons";
+import { ShakeOnce } from "@/components/shake-once";
 import { halfdayBody, halfdayDisplayBold, halfdayDisplayLight } from "@/lib/fonts";
 
 export function Hero() {
@@ -28,11 +29,15 @@ export function Hero() {
             <span className="font-[family-name:var(--font-halfday-body)] text-[22px] leading-[1.2] font-bold text-black sm:text-[32px] lg:text-[48px]">
               The day rate app
             </span>
-            <PercentCutIcon className="size-7 shrink-0 sm:size-10 lg:size-[52px]" />
+            <ShakeOnce>
+              <PercentCutIcon className="size-7 shrink-0 sm:size-10 lg:size-[52px]" />
+            </ShakeOnce>
             <span className="font-[family-name:var(--font-halfday-body)] text-[22px] leading-[1.2] font-bold text-black sm:text-[32px] lg:text-[48px]">
               for freelancers
             </span>
-            <SquiggleIcon className="size-7 shrink-0 sm:size-10 lg:size-[52px]" />
+            <ShakeOnce>
+              <SquiggleIcon className="size-7 shrink-0 sm:size-10 lg:size-[52px]" />
+            </ShakeOnce>
           </div>
 
           <p className="font-[family-name:var(--font-halfday-body)] -rotate-[1deg] text-[17px] leading-[1.2] font-medium text-black sm:text-[22px] lg:text-[28px]">

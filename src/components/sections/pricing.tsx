@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { RocketIcon } from "@/components/icons";
 import { Reveal } from "@/components/reveal";
+import { ShakeOnce } from "@/components/shake-once";
 import { halfdayBody, halfdayDisplayBold } from "@/lib/fonts";
 
 type BillingPeriod = "monthly" | "yearly";
@@ -23,7 +24,9 @@ export function Pricing() {
           <span className="font-[family-name:var(--font-halfday-display-bold)] text-[36px] leading-[1.2] font-bold text-black sm:text-[56px] lg:text-[80px]">
             PRO
           </span>
-          <RocketIcon className="size-9 shrink-0 sm:size-12 lg:size-24" />
+          <ShakeOnce>
+            <RocketIcon className="size-9 shrink-0 sm:size-12 lg:size-24" />
+          </ShakeOnce>
           <span className="font-[family-name:var(--font-halfday-display-bold)] text-[36px] leading-[1.2] font-bold text-black sm:text-[56px] lg:text-[80px]">
             WHEN YOU&apos;RE BUSY.
           </span>
