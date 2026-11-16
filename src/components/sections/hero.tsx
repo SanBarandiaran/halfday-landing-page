@@ -14,7 +14,7 @@ export function Hero() {
           <span className="font-[family-name:var(--font-halfday-display-bold)] text-[52px] leading-[1.2] font-bold text-black sm:text-[84px] lg:text-[128px]">
             STOP
           </span>
-          <span className="inline-flex flex-wrap items-baseline justify-center">
+          <span className="origin-bottom animate-[flip-in_0.8s_ease-out_0.2s_both] inline-flex flex-wrap items-baseline justify-center [backface-visibility:hidden]">
             <span className="font-[family-name:var(--font-halfday-display-light)] text-[30px] leading-[1.2] font-light tracking-[-0.04em] text-[#FF9C8E] italic sm:text-[46px] lg:text-[70px]">
               UNDER
             </span>
