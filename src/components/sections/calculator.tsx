@@ -140,7 +140,7 @@ export function Calculator() {
               ${dayRate.toLocaleString()}
             </p>
             <p className="font-[family-name:var(--font-halfday-body)] text-lg leading-tight font-medium text-black sm:text-xl lg:text-[30px]">
-              That&apos;s <span className="text-[#FF9C8E]">${hourlyRate}</span> an hour.
+              That&apos;s <span className="font-bold text-[#FF9C8E]">${hourlyRate}</span> an hour.
             </p>
           </div>
           <p className="font-[family-name:var(--font-halfday-body)] whitespace-nowrap text-[clamp(9px,2.9vw,22px)] leading-tight font-medium text-black">
