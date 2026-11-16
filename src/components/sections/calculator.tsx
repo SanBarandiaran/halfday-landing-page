@@ -143,7 +143,7 @@ export function Calculator() {
               That&apos;s <span className="text-[#FF9C8E]">${hourlyRate}</span> an hour.
             </p>
           </div>
-          <p className="font-[family-name:var(--font-halfday-body)] max-w-md text-center text-base leading-tight font-medium text-black sm:text-lg lg:text-[22px]">
+          <p className="font-[family-name:var(--font-halfday-body)] whitespace-nowrap text-[clamp(9px,2.9vw,22px)] leading-tight font-medium text-black">
             Higher than you thought? Good. Nobody bills 52 weeks.
           </p>
         </div>
