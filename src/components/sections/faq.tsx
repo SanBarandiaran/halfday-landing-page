@@ -53,7 +53,7 @@ export function Faq() {
               <ArrowRightIcon className="size-7 shrink-0 text-black transition-transform duration-300 sm:size-9 lg:size-12" />
             </ShakeOnce>
             <div className="flex flex-col items-start">
-              <p className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-semibold text-black sm:text-2xl lg:text-[32px]">
+              <p className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-bold text-black sm:text-2xl lg:text-[32px]">
                 {item.question}
               </p>
               <p className="font-[family-name:var(--font-halfday-body)] text-lg leading-tight font-medium text-black sm:text-xl lg:text-[32px]">
