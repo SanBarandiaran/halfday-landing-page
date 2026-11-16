@@ -56,7 +56,7 @@ export function Faq() {
               <p className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-semibold text-black sm:text-2xl lg:text-[32px]">
                 {item.question}
               </p>
-              <p className="font-[family-name:var(--font-halfday-body)] text-lg leading-tight text-black sm:text-xl lg:text-[32px]">
+              <p className="font-[family-name:var(--font-halfday-body)] text-lg leading-tight font-thin text-black sm:text-xl lg:text-[32px]">
                 {item.answer}
               </p>
             </div>

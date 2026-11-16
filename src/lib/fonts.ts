@@ -16,6 +16,6 @@ export const halfdayDisplayLight = Roboto_Condensed({
 export const halfdayBody = Inter({
   variable: "--font-halfday-body",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["100", "500", "600", "700"],
   style: ["normal", "italic"],
 });
