@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className={`${halfdayDisplayBold.variable} ${halfdayDisplayLight.variable} ${halfdayBody.variable} flex min-h-dvh w-full scroll-mt-20 flex-col items-center justify-center gap-10 bg-[#F0ECE3] px-6 pt-28 pb-8 sm:gap-12 sm:px-10 sm:pb-16 lg:gap-16 lg:pt-24`}
+      className={`${halfdayDisplayBold.variable} ${halfdayDisplayLight.variable} ${halfdayBody.variable} flex min-h-dvh w-full scroll-mt-20 flex-col items-center justify-center gap-10 bg-[#F0ECE3] px-6 pt-28 pb-4 sm:gap-12 sm:px-10 sm:pb-16 lg:gap-16 lg:pt-24`}
     >
       <div className="flex animate-[fade-up_0.7s_ease-out_both] flex-col items-center gap-6 text-center sm:gap-7">
         <div className="flex rotate-[2deg] flex-wrap items-baseline justify-center gap-x-4 gap-y-1 sm:gap-x-6 lg:gap-x-8">

@@ -27,7 +27,7 @@ export function Calculator() {
   return (
     <section
       id="calculator"
-      className={`${halfdayDisplayBold.variable} ${halfdayBody.variable} flex w-full scroll-mt-20 flex-col items-center gap-14 bg-[#F0ECE3] px-6 pt-10 pb-20 sm:gap-16 sm:px-10 sm:py-24 lg:py-[90px]`}
+      className={`${halfdayDisplayBold.variable} ${halfdayBody.variable} flex w-full scroll-mt-20 flex-col items-center gap-14 bg-[#F0ECE3] px-6 pt-5 pb-20 sm:gap-16 sm:px-10 sm:py-24 lg:py-[90px]`}
     >
       <Reveal className="flex items-center gap-3 sm:gap-4">
         <h2 className="font-[family-name:var(--font-halfday-display-bold)] text-[40px] leading-[1.2] font-bold text-black sm:text-[56px] lg:text-[80px]">
@@ -40,12 +40,12 @@ export function Calculator() {
 
       <Reveal
         delay={100}
-        className="grid w-full max-w-xl grid-cols-1 gap-7 sm:grid-cols-[auto_1fr] sm:items-center sm:gap-x-10 sm:gap-y-8"
+        className="grid w-full max-w-xl grid-cols-1 gap-7 sm:max-w-2xl sm:grid-cols-[auto_1fr] sm:items-center sm:gap-x-10 sm:gap-y-8"
       >
         <div className="flex flex-col items-center gap-2 text-center sm:contents">
           <label
             htmlFor="take-home"
-            className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black sm:text-2xl lg:text-[36px]"
+            className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black sm:text-2xl sm:whitespace-nowrap lg:text-[36px]"
           >
             Take home this year
           </label>
@@ -68,7 +68,7 @@ export function Calculator() {
         <div className="flex flex-col items-center gap-2 text-center sm:contents">
           <label
             htmlFor="costs"
-            className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black sm:text-2xl lg:text-[36px]"
+            className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black sm:text-2xl sm:whitespace-nowrap lg:text-[36px]"
           >
             Business costs*
           </label>
@@ -91,7 +91,7 @@ export function Calculator() {
         <div className="flex flex-col items-center gap-2 text-center sm:contents">
           <label
             htmlFor="weeks-off"
-            className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black sm:text-2xl lg:text-[36px]"
+            className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black sm:text-2xl sm:whitespace-nowrap lg:text-[36px]"
           >
             Weeks off
           </label>
@@ -114,7 +114,7 @@ export function Calculator() {
         <div className="flex flex-col items-center gap-2 text-center sm:contents">
           <label
             htmlFor="days-per-week"
-            className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black sm:text-2xl lg:text-[36px]"
+            className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black sm:text-2xl sm:whitespace-nowrap lg:text-[36px]"
           >
             Days you bill a week
           </label>
