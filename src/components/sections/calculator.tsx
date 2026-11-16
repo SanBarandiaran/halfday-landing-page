@@ -40,7 +40,7 @@ export function Calculator() {
 
       <Reveal
         delay={100}
-        className="grid w-full max-w-xl grid-cols-1 gap-7 sm:grid-cols-[auto_1fr] sm:items-center sm:gap-x-6 sm:gap-y-8"
+        className="grid w-full max-w-xl grid-cols-1 gap-7 sm:grid-cols-[auto_1fr] sm:items-center sm:gap-x-10 sm:gap-y-8"
       >
         <div className="flex flex-col gap-2 sm:contents">
           <label
