@@ -53,12 +53,12 @@ export function Pricing() {
         <Reveal
           delay={150}
           direction="bottom"
-          className="flex flex-col items-start gap-7 rounded-lg bg-[#FF9C8E] p-8 transition-transform duration-300 hover:-translate-y-1 sm:p-10"
+          className="flex flex-col items-center gap-7 rounded-lg bg-[#FF9C8E] p-8 text-center transition-transform duration-300 hover:-translate-y-1 sm:items-start sm:p-10 sm:text-left"
         >
           <h3 className="font-[family-name:var(--font-halfday-body)] text-3xl leading-tight font-bold text-black sm:text-4xl lg:text-[42px]">
             Free
           </h3>
-          <div className="flex flex-col items-start gap-4">
+          <div className="flex flex-col items-center gap-4 sm:items-start">
             <p className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight text-black sm:text-2xl lg:text-[32px]">
               $0. Forever.
             </p>
@@ -80,12 +80,12 @@ export function Pricing() {
         <Reveal
           delay={250}
           direction="bottom"
-          className="flex flex-col items-start gap-7 rounded-lg bg-[#F1AF55] p-8 transition-transform duration-300 hover:-translate-y-1 sm:p-10"
+          className="flex flex-col items-center gap-7 rounded-lg bg-[#F1AF55] p-8 text-center transition-transform duration-300 hover:-translate-y-1 sm:items-start sm:p-10 sm:text-left"
         >
           <h3 className="font-[family-name:var(--font-halfday-body)] text-3xl leading-tight font-bold text-black sm:text-4xl lg:text-[42px]">
             Pro
           </h3>
-          <div className="flex flex-col items-start gap-4">
+          <div className="flex flex-col items-center gap-4 sm:items-start">
             <p className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight text-black transition-opacity duration-300 sm:text-2xl lg:text-[32px]">
               {billing === "monthly" ? "$8 a month." : "$80 a year. That's 2 months free."}
             </p>

@@ -42,14 +42,14 @@ export function Calculator() {
         delay={100}
         className="grid w-full max-w-xl grid-cols-1 gap-7 sm:grid-cols-[auto_1fr] sm:items-center sm:gap-x-10 sm:gap-y-8"
       >
-        <div className="flex flex-col gap-2 sm:contents">
+        <div className="flex flex-col items-center gap-2 text-center sm:contents">
           <label
             htmlFor="take-home"
             className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black sm:text-2xl lg:text-[36px]"
           >
             Take home this year
           </label>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-3 sm:justify-start">
             <input
               id="take-home"
               type="number"
@@ -63,14 +63,14 @@ export function Calculator() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 sm:contents">
+        <div className="flex flex-col items-center gap-2 text-center sm:contents">
           <label
             htmlFor="costs"
             className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black sm:text-2xl lg:text-[36px]"
           >
             Business costs*
           </label>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-3 sm:justify-start">
             <input
               id="costs"
               type="number"
@@ -84,14 +84,14 @@ export function Calculator() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 sm:contents">
+        <div className="flex flex-col items-center gap-2 text-center sm:contents">
           <label
             htmlFor="weeks-off"
             className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black sm:text-2xl lg:text-[36px]"
           >
             Weeks off
           </label>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-3 sm:justify-start">
             <input
               id="weeks-off"
               type="number"
@@ -105,14 +105,14 @@ export function Calculator() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 sm:contents">
+        <div className="flex flex-col items-center gap-2 text-center sm:contents">
           <label
             htmlFor="days-per-week"
             className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black sm:text-2xl lg:text-[36px]"
           >
             Days you bill a week
           </label>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-3 sm:justify-start">
             <input
               id="days-per-week"
               type="number"

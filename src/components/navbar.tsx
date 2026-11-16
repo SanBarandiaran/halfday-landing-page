@@ -104,14 +104,6 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/#calculator"
-            onClick={() => setOpen(false)}
-            tabIndex={open ? 0 : -1}
-            className="font-[family-name:var(--font-halfday-body)] mt-2 inline-flex items-center justify-center rounded-full border-[3px] border-[#FF9C8E] bg-black px-6 py-3 text-lg font-bold text-white transition-colors hover:bg-zinc-800"
-          >
-            Find my rate
-          </Link>
         </div>
       </nav>
 
