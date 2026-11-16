@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Subby",
-  description: "How Subby collects, uses, and protects your information.",
+  title: "Privacy Policy - Halfday",
+  description: "How Halfday collects, uses, and protects your information.",
 };
 
 export default function PrivacyPage() {
@@ -15,7 +15,7 @@ export default function PrivacyPage() {
         {
           heading: "Introduction",
           body: [
-            "This Privacy Policy explains how Subby (\"we\", \"us\") collects, uses, and shares information when you use our website and services.",
+            "This Privacy Policy explains how Halfday (\"we\", \"us\") collects, uses, and shares information when you use our website and services.",
           ],
         },
         {
@@ -33,7 +33,7 @@ export default function PrivacyPage() {
         {
           heading: "Data Sharing",
           body: [
-            "We do not sell your personal information. We may share information with service providers who help us operate Subby, subject to confidentiality obligations.",
+            "We do not sell your personal information. We may share information with service providers who help us operate Halfday, subject to confidentiality obligations.",
           ],
         },
         {
@@ -62,7 +62,7 @@ export default function PrivacyPage() {
         },
         {
           heading: "Contact Us",
-          body: ["If you have questions about this Privacy Policy, contact us at privacy@subby.app."],
+          body: ["If you have questions about this Privacy Policy, contact us at privacy@halfday.app."],
         },
       ]}
     />

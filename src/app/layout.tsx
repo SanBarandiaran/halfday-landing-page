@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Know where your money goes",
-  description: "Track every subscription, see what's due next, and stop paying for things you no longer use.",
+  title: "Halfday — Stop undercharging",
+  description: "The day rate app for freelancers. Work out what to charge in under a minute.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

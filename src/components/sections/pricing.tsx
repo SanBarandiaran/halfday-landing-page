@@ -1,43 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowUpRightIcon, CheckIcon } from "@/components/icons";
+import { RocketIcon } from "@/components/icons";
+import { halfdayBody, halfdayDisplayBold } from "@/lib/fonts";
 
-type BillingPeriod = "monthly" | "annually";
-
-type Plan = {
-  id: string;
-  name: string;
-  badge: string;
-  price: string;
-  period: string;
-  theme: "light" | "dark";
-  features: string[];
-  cta: string;
-};
-
-const plans: Plan[] = [
-  {
-    id: "free",
-    name: "FREE",
-    badge: "FOR GETTING ORGANIZED",
-    price: "$0",
-    period: "/forever",
-    theme: "light",
-    features: ["Track up for 5 subscriptions", "Monthly and annual totals", "Upcoming-payment timeline"],
-    cta: "Start tracking for free",
-  },
-  {
-    id: "pro",
-    name: "PRO",
-    badge: "FOR GETTING ORGANIZED",
-    price: "$4",
-    period: "/month",
-    theme: "dark",
-    features: ["Unlimited subscriptions", "Smart renewal reminders", "Category and review insights"],
-    cta: "Start tracking subscriptions",
-  },
-];
+type BillingPeriod = "monthly" | "yearly";
 
 export function Pricing() {
   const [billing, setBilling] = useState<BillingPeriod>("monthly");
@@ -45,89 +12,87 @@ export function Pricing() {
   return (
     <section
       id="pricing"
-      className="flex w-full scroll-mt-24 flex-col items-center bg-[#F2F2F2] px-6 py-20 md:px-10 md:py-28"
+      className={`${halfdayDisplayBold.variable} ${halfdayBody.variable} flex w-full scroll-mt-20 flex-col items-center gap-14 bg-[#F0ECE3] px-6 py-20 sm:gap-[60px] sm:px-10 sm:py-24 lg:py-[90px]`}
     >
-      <div className="flex w-full max-w-[1240px] flex-col gap-12 md:gap-16">
-        <div className="flex flex-col items-start justify-between gap-6 md:flex-row">
-          <h2 className="max-w-xl text-[40px] font-medium leading-[0.95] tracking-[-0.06em] text-black sm:text-[56px] lg:text-[72px]">
-            Simple pricing.
-            <br />
-            No surprises.
-          </h2>
-          <p className="max-w-sm text-lg leading-7 tracking-[-0.06em] text-black sm:text-xl">
-            Start with the essentials, upgrade when your subscription list grows.
-          </p>
-        </div>
+      <div className="flex flex-col items-center gap-1 text-center">
+        <h2 className="font-[family-name:var(--font-halfday-display-bold)] text-[36px] leading-[1.2] font-bold text-black sm:text-[56px] lg:text-[80px]">
+          FREE TO USE.
+        </h2>
+        <p className="flex flex-wrap items-center justify-center gap-x-1 gap-y-1">
+          <span className="font-[family-name:var(--font-halfday-display-bold)] text-[36px] leading-[1.2] font-bold text-black sm:text-[56px] lg:text-[80px]">
+            PRO
+          </span>
+          <RocketIcon className="size-9 shrink-0 sm:size-12 lg:size-24" />
+          <span className="font-[family-name:var(--font-halfday-display-bold)] text-[36px] leading-[1.2] font-bold text-black sm:text-[56px] lg:text-[80px]">
+            WHEN YOU&apos;RE BUSY.
+          </span>
+        </p>
+      </div>
 
-        <div className="flex justify-center md:justify-end">
-          <div className="flex items-start gap-1 rounded bg-black p-1">
-            {(["monthly", "annually"] as BillingPeriod[]).map((period) => (
-              <button
-                key={period}
-                type="button"
-                onClick={() => setBilling(period)}
-                className={`rounded px-2.5 py-2.5 text-sm font-bold tracking-wide uppercase transition-colors ${
-                  billing === period ? "bg-[#FEFF7F] text-[#4A4949]" : "bg-black text-white"
-                }`}
-              >
-                {period}
-              </button>
-            ))}
+      <div className="flex items-center justify-center gap-2 rounded-full border-[4px] border-[#FF9C8E] bg-black px-3 py-2">
+        {(["monthly", "yearly"] as BillingPeriod[]).map((period) => (
+          <button
+            key={period}
+            type="button"
+            onClick={() => setBilling(period)}
+            aria-pressed={billing === period}
+            className={`rounded-full px-4 py-2 font-[family-name:var(--font-halfday-body)] text-lg font-bold capitalize transition-colors sm:text-xl lg:text-[25px] ${
+              billing === period ? "bg-white text-black" : "text-white hover:text-white/70"
+            }`}
+          >
+            {period}
+          </button>
+        ))}
+      </div>
+
+      <div className="grid w-full max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="flex flex-col items-start gap-7 rounded-lg bg-[#FF9C8E] p-8 sm:p-10">
+          <h3 className="font-[family-name:var(--font-halfday-body)] text-3xl leading-tight font-bold text-black sm:text-4xl lg:text-[42px]">
+            Free
+          </h3>
+          <div className="flex flex-col items-start gap-4">
+            <p className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight text-black sm:text-2xl lg:text-[32px]">
+              $0. Forever.
+            </p>
+            <p className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight text-black sm:text-2xl lg:text-[32px]">
+              The calculator.
+            </p>
+            <p className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight text-black sm:text-2xl lg:text-[32px]">
+              One saved rate.
+            </p>
           </div>
+          <a
+            href="#"
+            className="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 font-[family-name:var(--font-halfday-body)] text-lg font-bold text-white transition-colors hover:bg-zinc-800 sm:text-xl lg:text-[25px]"
+          >
+            Start free
+          </a>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {plans.map((plan) => {
-            const isDark = plan.theme === "dark";
-            return (
-              <div
-                key={plan.id}
-                className={`flex flex-col gap-10 rounded-2xl p-5 ${isDark ? "bg-black text-white" : "bg-white text-black"}`}
-              >
-                <div className="flex flex-col gap-9">
-                  <div className="flex items-center justify-between gap-4">
-                    <span className="text-[32px] font-bold leading-none tracking-[-0.06em] sm:text-[42px]">
-                      {plan.name}
-                    </span>
-                    <span
-                      className={`shrink-0 rounded-lg px-2.5 py-2.5 text-sm font-bold tracking-wide text-[#4A4949] ${
-                        isDark ? "bg-[#FEFF7F]" : "bg-[#F0F0F0]"
-                      }`}
-                    >
-                      {plan.badge}
-                    </span>
-                  </div>
-
-                  <div className="flex items-end justify-between gap-4">
-                    <span className="text-[64px] font-semibold leading-none tracking-[-0.06em] sm:text-[88px] lg:text-[100px]">
-                      {plan.price}
-                    </span>
-                    <span className="pb-1 text-lg tracking-[-0.06em] text-[#767676] sm:text-xl">{plan.period}</span>
-                  </div>
-
-                  <div className="flex flex-col">
-                    {plan.features.map((feature) => (
-                      <div key={feature} className="flex items-center gap-3 border-t-2 border-[#F0F0F0] py-3.5">
-                        <CheckIcon className={`size-6 shrink-0 ${isDark ? "text-[#FEFF7F]" : "text-black"}`} />
-                        <span className="text-lg font-semibold sm:text-xl">{feature}</span>
-                      </div>
-                    ))}
-                    <div className="h-[54px] border-t-2 border-[#F0F0F0]" />
-                  </div>
-                </div>
-
-                <a
-                  href="#"
-                  className={`group flex h-[60px] items-center justify-between rounded-2xl px-4 text-lg font-medium transition-colors sm:text-xl ${
-                    isDark ? "bg-[#FEFF7F] text-black hover:bg-[#f5f66b]" : "bg-black text-white hover:bg-zinc-800"
-                  }`}
-                >
-                  {plan.cta}
-                  <ArrowUpRightIcon className="size-6 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </a>
-              </div>
-            );
-          })}
+        <div className="flex flex-col items-start gap-7 rounded-lg bg-[#F1AF55] p-8 sm:p-10">
+          <h3 className="font-[family-name:var(--font-halfday-body)] text-3xl leading-tight font-bold text-black sm:text-4xl lg:text-[42px]">
+            Pro
+          </h3>
+          <div className="flex flex-col items-start gap-4">
+            <p className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight text-black sm:text-2xl lg:text-[32px]">
+              {billing === "monthly" ? "$8 a month." : "$80 a year. That's 2 months free."}
+            </p>
+            <p className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight text-black sm:text-2xl lg:text-[32px]">
+              A rate for every client.
+            </p>
+            <p className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight text-black sm:text-2xl lg:text-[32px]">
+              Quotes as PDFs.
+            </p>
+            <p className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight text-black sm:text-2xl lg:text-[32px]">
+              Any currency.
+            </p>
+          </div>
+          <a
+            href="#"
+            className="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 font-[family-name:var(--font-halfday-body)] text-lg font-bold text-white transition-colors hover:bg-zinc-800 sm:text-xl lg:text-[25px]"
+          >
+            Go Pro
+          </a>
         </div>
       </div>
     </section>

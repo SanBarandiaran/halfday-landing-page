@@ -1,62 +1,39 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import { LogoMark } from "@/components/icons";
+import { halfdayBody, halfdayDisplayBold } from "@/lib/fonts";
 
 const links = [
-  { label: "Product", href: "/#product" },
+  { label: "Calculator", href: "/#calculator" },
   { label: "How it works", href: "/#how-it-works" },
   { label: "Pricing", href: "/#pricing" },
+  { label: "FAQ", href: "/#faq" },
   { label: "Privacy", href: "/privacy" },
-  { label: "Terms", href: "/terms" },
 ];
 
 export function Footer() {
-  const [time, setTime] = useState<string | null>(null);
-  const [year, setYear] = useState<number | null>(null);
-
-  useEffect(() => {
-    const update = () => {
-      const now = new Date();
-      setTime(now.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }));
-      setYear(now.getFullYear());
-    };
-    update();
-    const id = setInterval(update, 1000);
-    return () => clearInterval(id);
-  }, []);
-
   return (
-    <footer className="flex w-full flex-col items-center bg-black px-6 py-10 md:px-10 md:py-12">
-      <div className="flex w-full max-w-[1240px] flex-col gap-16 md:gap-20">
-        <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <a href="#" className="flex shrink-0 items-center gap-1 text-white">
-            <LogoMark className="size-6" />
-            <span className="text-2xl font-semibold leading-none">Subby</span>
-          </a>
-
-          <nav className="flex flex-wrap items-center gap-x-8 gap-y-2">
-            {links.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="text-lg font-medium text-white transition-colors hover:text-white/60"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-
-        <div className="flex flex-col items-start gap-2 border-t border-[#4A4848] pt-5 text-[#7E7978] sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-2 text-lg font-medium">
-            <span>LOCAL TIME:</span>
-            <span>{time ?? "--:--"}</span>
-          </div>
-          <p className="text-lg font-medium">©{year ?? ""} Subby - Made with Magic in Barcelona</p>
-        </div>
+    <footer
+      className={`${halfdayDisplayBold.variable} ${halfdayBody.variable} flex w-full flex-col items-start gap-6 bg-[#F0ECE3] px-6 py-10 sm:flex-row sm:items-center sm:justify-between sm:gap-10 sm:px-10`}
+    >
+      <div className="flex flex-wrap items-end gap-2">
+        <span className="font-[family-name:var(--font-halfday-display-bold)] text-xl leading-[1.2] font-bold text-black">
+          HALFDAY.
+        </span>
+        <span className="font-[family-name:var(--font-halfday-body)] text-sm leading-tight text-black">
+          Made for freelancers who are done guessing.
+        </span>
       </div>
+
+      <nav className="flex flex-wrap items-center gap-x-8 gap-y-2">
+        {links.map((link) => (
+          <Link
+            key={link.label}
+            href={link.href}
+            className="font-[family-name:var(--font-halfday-body)] text-base leading-tight font-medium text-black transition-opacity hover:opacity-60 sm:text-lg lg:text-[20px]"
+          >
+            {link.label}
+          </Link>
+        ))}
+      </nav>
     </footer>
   );
 }
