@@ -52,6 +52,7 @@ export function Pricing() {
       <div className="grid w-full max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2">
         <Reveal
           delay={150}
+          direction="bottom"
           className="flex flex-col items-start gap-7 rounded-lg bg-[#FF9C8E] p-8 transition-transform duration-300 hover:-translate-y-1 sm:p-10"
         >
           <h3 className="font-[family-name:var(--font-halfday-body)] text-3xl leading-tight font-bold text-black sm:text-4xl lg:text-[42px]">
@@ -78,6 +79,7 @@ export function Pricing() {
 
         <Reveal
           delay={250}
+          direction="bottom"
           className="flex flex-col items-start gap-7 rounded-lg bg-[#F1AF55] p-8 transition-transform duration-300 hover:-translate-y-1 sm:p-10"
         >
           <h3 className="font-[family-name:var(--font-halfday-body)] text-3xl leading-tight font-bold text-black sm:text-4xl lg:text-[42px]">

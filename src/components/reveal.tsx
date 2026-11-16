@@ -3,18 +3,20 @@
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 
-type RevealDirection = "up" | "left" | "right";
+type RevealDirection = "up" | "left" | "right" | "bottom";
 
 const hiddenTransform: Record<RevealDirection, string> = {
   up: "translate-y-4",
   left: "-translate-x-12",
   right: "translate-x-12",
+  bottom: "translate-y-16",
 };
 
 const visibleTransform: Record<RevealDirection, string> = {
   up: "translate-y-0",
   left: "translate-x-0",
   right: "translate-x-0",
+  bottom: "translate-y-0",
 };
 
 export function Reveal({
