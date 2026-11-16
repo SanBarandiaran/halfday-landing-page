@@ -27,7 +27,7 @@ export function Calculator() {
       id="calculator"
       className={`${halfdayDisplayBold.variable} ${halfdayBody.variable} flex w-full scroll-mt-20 flex-col items-center gap-14 bg-[#F0ECE3] px-6 py-20 sm:gap-16 sm:px-10 sm:py-24 lg:py-[90px]`}
     >
-      <div className="flex rotate-[6deg] items-center gap-3 sm:gap-4">
+      <div className="flex items-center gap-3 sm:gap-4">
         <h2 className="font-[family-name:var(--font-halfday-display-bold)] text-[40px] leading-[1.2] font-bold text-black sm:text-[56px] lg:text-[80px]">
           Your numbers
         </h2>
