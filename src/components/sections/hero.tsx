@@ -43,7 +43,7 @@ export function Hero() {
 
       <Link
         href="/#calculator"
-        className="font-[family-name:var(--font-halfday-body)] inline-flex animate-[fade-up_0.8s_ease-out_0.15s_both] items-center justify-center rounded-full border-[4px] border-[#FF9C8E] bg-black px-6 py-3.5 text-base leading-[1.2] font-bold text-white transition-colors hover:bg-zinc-800 sm:px-7 sm:py-4 sm:text-lg lg:px-8 lg:text-[25px]"
+        className="font-[family-name:var(--font-halfday-body)] inline-flex animate-[fade-up_0.8s_ease-out_0.15s_both] items-center justify-center rounded-full border-[4px] border-[#FF9C8E] bg-black px-6 py-3.5 text-base leading-[1.2] font-bold text-white transition-all hover:scale-105 hover:bg-zinc-800 sm:px-7 sm:py-4 sm:text-lg lg:px-8 lg:text-[25px]"
       >
         Find my rate
       </Link>

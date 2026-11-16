@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { CalculatorGlyphIcon } from "@/components/icons";
+import { Reveal } from "@/components/reveal";
 import { halfdayBody, halfdayDisplayBold } from "@/lib/fonts";
 
 function clamp(value: number, min: number, max: number) {
@@ -27,14 +28,14 @@ export function Calculator() {
       id="calculator"
       className={`${halfdayDisplayBold.variable} ${halfdayBody.variable} flex w-full scroll-mt-20 flex-col items-center gap-14 bg-[#F0ECE3] px-6 py-20 sm:gap-16 sm:px-10 sm:py-24 lg:py-[90px]`}
     >
-      <div className="flex items-center gap-3 sm:gap-4">
+      <Reveal className="flex items-center gap-3 sm:gap-4">
         <h2 className="font-[family-name:var(--font-halfday-display-bold)] text-[40px] leading-[1.2] font-bold text-black sm:text-[56px] lg:text-[80px]">
           Your numbers
         </h2>
         <CalculatorGlyphIcon className="size-10 shrink-0 sm:size-14 lg:size-[83px]" />
-      </div>
+      </Reveal>
 
-      <div className="flex w-full max-w-xl flex-col items-stretch gap-7 sm:gap-8">
+      <Reveal delay={100} className="flex w-full max-w-xl flex-col items-stretch gap-7 sm:gap-8">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
           <label
             htmlFor="take-home"
@@ -118,15 +119,18 @@ export function Calculator() {
             <span className="font-[family-name:var(--font-halfday-body)] text-xl font-medium text-[#C2C1C1]">1 to 5</span>
           </div>
         </div>
-      </div>
+      </Reveal>
 
-      <div className="flex flex-col items-center gap-[68px]">
+      <Reveal delay={200} className="flex flex-col items-center gap-[68px]">
         <div className="flex flex-col items-center gap-5">
           <div className="flex flex-col items-center gap-1">
             <h3 className="font-[family-name:var(--font-halfday-body)] text-3xl leading-tight font-bold text-black sm:text-4xl lg:text-[42px]">
               Your day rate
             </h3>
-            <p className="font-[family-name:var(--font-halfday-display-bold)] text-[56px] leading-[1.2] font-bold text-[#F1AF55] sm:text-[72px] lg:text-[88px]">
+            <p
+              key={dayRate}
+              className="animate-[pop-in_0.25s_ease-out] font-[family-name:var(--font-halfday-display-bold)] text-[56px] leading-[1.2] font-bold text-[#F1AF55] sm:text-[72px] lg:text-[88px]"
+            >
               ${dayRate.toLocaleString()}
             </p>
             <p className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black sm:text-2xl lg:text-[36px]">
@@ -141,7 +145,7 @@ export function Calculator() {
         <p className="font-[family-name:var(--font-halfday-body)] text-base leading-tight font-medium text-black sm:text-lg lg:text-[22px]">
           *software, gear, insurance, accountant
         </p>
-      </div>
+      </Reveal>
     </section>
   );
 }

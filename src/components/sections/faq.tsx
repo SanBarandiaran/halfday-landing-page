@@ -1,4 +1,5 @@
 import { ArrowRightIcon, LinkIcon } from "@/components/icons";
+import { Reveal } from "@/components/reveal";
 import { halfdayBody, halfdayDisplayBold } from "@/lib/fonts";
 
 const faqs = [
@@ -35,17 +36,17 @@ export function Faq() {
       id="faq"
       className={`${halfdayDisplayBold.variable} ${halfdayBody.variable} flex w-full scroll-mt-20 flex-col items-center gap-14 bg-[#F0ECE3] px-6 py-20 sm:gap-16 sm:px-10 sm:py-24`}
     >
-      <div className="flex items-center gap-1">
+      <Reveal className="flex items-center gap-1">
         <h2 className="font-[family-name:var(--font-halfday-display-bold)] text-[32px] leading-[1.2] font-bold text-black sm:text-[48px] lg:text-[60px]">
           FAQ
         </h2>
         <LinkIcon className="size-6 shrink-0 sm:size-8 lg:size-[58px]" />
-      </div>
+      </Reveal>
 
       <div className="-rotate-[1deg] flex w-full max-w-3xl flex-col gap-8 sm:gap-10">
-        {faqs.map((item) => (
-          <div key={item.question} className={`flex items-start gap-3 ${item.indent ? "sm:pl-5" : ""}`}>
-            <ArrowRightIcon className="mt-1 size-7 shrink-0 text-black sm:size-9 lg:size-12" />
+        {faqs.map((item, index) => (
+          <Reveal key={item.question} delay={index * 80} className={`flex items-start gap-3 ${item.indent ? "sm:pl-5" : ""}`}>
+            <ArrowRightIcon className="mt-1 size-7 shrink-0 text-black transition-transform duration-300 sm:size-9 lg:size-12" />
             <div className="flex flex-col items-start">
               <p className="font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-semibold text-black sm:text-2xl lg:text-[32px]">
                 {item.question}
@@ -54,7 +55,7 @@ export function Faq() {
                 {item.answer}
               </p>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>
