@@ -27,7 +27,7 @@ export function Calculator() {
   return (
     <section
       id="calculator"
-      className={`${halfdayDisplayBold.variable} ${halfdayBody.variable} flex w-full scroll-mt-20 flex-col items-center gap-14 bg-[#F0ECE3] px-6 py-20 sm:gap-16 sm:px-10 sm:py-24 lg:py-[90px]`}
+      className={`${halfdayDisplayBold.variable} ${halfdayBody.variable} flex w-full scroll-mt-20 flex-col items-center gap-14 bg-[#F0ECE3] px-6 pt-10 pb-20 sm:gap-16 sm:px-10 sm:py-24 lg:py-[90px]`}
     >
       <Reveal className="flex items-center gap-3 sm:gap-4">
         <h2 className="font-[family-name:var(--font-halfday-display-bold)] text-[40px] leading-[1.2] font-bold text-black sm:text-[56px] lg:text-[80px]">
@@ -49,7 +49,7 @@ export function Calculator() {
           >
             Take home this year
           </label>
-          <div className="flex items-center justify-center gap-3 sm:justify-start">
+          <div className="relative mx-auto w-[110px] sm:static sm:mx-0 sm:flex sm:w-auto sm:items-center sm:gap-3">
             <input
               id="take-home"
               type="number"
@@ -59,7 +59,9 @@ export function Calculator() {
               onChange={(event) => setTakeHome(Number(event.target.value) || 0)}
               className="h-[52px] w-[110px] rounded-lg bg-[#FF9C8E] px-3 text-right font-[family-name:var(--font-halfday-body)] text-lg font-semibold text-black outline-none placeholder:text-black/40 focus-visible:ring-2 focus-visible:ring-black sm:w-[120px]"
             />
-            <span className="font-[family-name:var(--font-halfday-body)] text-2xl font-medium text-[#C2C1C1]">$</span>
+            <span className="absolute top-1/2 left-full ml-3 -translate-y-1/2 whitespace-nowrap font-[family-name:var(--font-halfday-body)] text-2xl font-medium text-[#C2C1C1] sm:static sm:ml-0 sm:translate-y-0">
+              $
+            </span>
           </div>
         </div>
 
@@ -70,7 +72,7 @@ export function Calculator() {
           >
             Business costs*
           </label>
-          <div className="flex items-center justify-center gap-3 sm:justify-start">
+          <div className="relative mx-auto w-[110px] sm:static sm:mx-0 sm:flex sm:w-auto sm:items-center sm:gap-3">
             <input
               id="costs"
               type="number"
@@ -80,7 +82,9 @@ export function Calculator() {
               onChange={(event) => setCosts(Number(event.target.value) || 0)}
               className="h-[52px] w-[110px] rounded-lg bg-[#FF9C8E] px-3 text-right font-[family-name:var(--font-halfday-body)] text-lg font-semibold text-black outline-none placeholder:text-black/40 focus-visible:ring-2 focus-visible:ring-black sm:w-[120px]"
             />
-            <span className="font-[family-name:var(--font-halfday-body)] text-2xl font-medium text-[#C2C1C1]">$</span>
+            <span className="absolute top-1/2 left-full ml-3 -translate-y-1/2 whitespace-nowrap font-[family-name:var(--font-halfday-body)] text-2xl font-medium text-[#C2C1C1] sm:static sm:ml-0 sm:translate-y-0">
+              $
+            </span>
           </div>
         </div>
 
@@ -91,7 +95,7 @@ export function Calculator() {
           >
             Weeks off
           </label>
-          <div className="flex items-center justify-center gap-3 sm:justify-start">
+          <div className="relative mx-auto w-[110px] sm:static sm:mx-0 sm:flex sm:w-auto sm:items-center sm:gap-3">
             <input
               id="weeks-off"
               type="number"
@@ -101,7 +105,9 @@ export function Calculator() {
               onChange={(event) => setWeeksOff(clamp(Number(event.target.value), 0, 12))}
               className="h-[52px] w-[110px] rounded-lg bg-[#FF9C8E] px-3 text-right font-[family-name:var(--font-halfday-body)] text-lg font-semibold text-black outline-none focus-visible:ring-2 focus-visible:ring-black sm:w-[120px]"
             />
-            <span className="font-[family-name:var(--font-halfday-body)] text-xl font-medium text-[#C2C1C1]">0 to 12</span>
+            <span className="absolute top-1/2 left-full ml-3 -translate-y-1/2 whitespace-nowrap font-[family-name:var(--font-halfday-body)] text-xl font-medium text-[#C2C1C1] sm:static sm:ml-0 sm:translate-y-0">
+              0 to 12
+            </span>
           </div>
         </div>
 
@@ -112,7 +118,7 @@ export function Calculator() {
           >
             Days you bill a week
           </label>
-          <div className="flex items-center justify-center gap-3 sm:justify-start">
+          <div className="relative mx-auto w-[110px] sm:static sm:mx-0 sm:flex sm:w-auto sm:items-center sm:gap-3">
             <input
               id="days-per-week"
               type="number"
@@ -122,7 +128,9 @@ export function Calculator() {
               onChange={(event) => setDaysPerWeek(clamp(Number(event.target.value), 1, 5))}
               className="h-[52px] w-[110px] rounded-lg bg-[#FF9C8E] px-3 text-right font-[family-name:var(--font-halfday-body)] text-lg font-semibold text-black outline-none focus-visible:ring-2 focus-visible:ring-black sm:w-[120px]"
             />
-            <span className="font-[family-name:var(--font-halfday-body)] text-xl font-medium text-[#C2C1C1]">1 to 5</span>
+            <span className="absolute top-1/2 left-full ml-3 -translate-y-1/2 whitespace-nowrap font-[family-name:var(--font-halfday-body)] text-xl font-medium text-[#C2C1C1] sm:static sm:ml-0 sm:translate-y-0">
+              1 to 5
+            </span>
           </div>
         </div>
       </Reveal>
