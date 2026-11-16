@@ -24,18 +24,18 @@ export function HowItWorks() {
       </Reveal>
 
       <div className="flex max-w-3xl flex-col items-center gap-9 text-center sm:gap-12">
-        <Reveal delay={0}>
+        <Reveal delay={0} direction="left">
           <p className="rotate-[1deg] font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black italic sm:text-2xl lg:text-[36px]">
             Take home. <span className="font-bold underline decoration-1 underline-offset-4 [text-underline-position:from-font]">What you keep</span>. After the business is paid.
           </p>
         </Reveal>
-        <Reveal delay={100}>
+        <Reveal delay={100} direction="right">
           <p className="-rotate-[1deg] font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black italic sm:text-2xl lg:text-[36px]">
             Costs. Software. Gear. The accountant.{" "}
             <span className="font-bold underline decoration-1 underline-offset-4 [text-underline-position:from-font]">It all counts</span>.
           </p>
         </Reveal>
-        <Reveal delay={200}>
+        <Reveal delay={200} direction="left">
           <p className="rotate-[2deg] font-[family-name:var(--font-halfday-body)] text-xl leading-tight font-medium text-black italic sm:text-2xl lg:text-[36px]">
             <span className="font-bold underline decoration-1 underline-offset-4 [text-underline-position:from-font]">Real days</span>. Not 52 weeks. Holidays are real.
           </p>
