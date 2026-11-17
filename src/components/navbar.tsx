@@ -49,7 +49,7 @@ export function Navbar() {
 
   return (
     <header
-      className={`${halfdayDisplayBold.variable} ${halfdayBody.variable} fixed inset-x-0 top-0 z-50 bg-[#F0ECE3]`}
+      className={`${halfdayDisplayBold.variable} ${halfdayBody.variable} fixed inset-x-0 top-0 z-50 mx-auto max-w-[1440px] bg-[#F0ECE3]`}
     >
       <div className="flex items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-10 lg:py-5">
         <Link

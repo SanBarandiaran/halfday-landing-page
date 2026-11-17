@@ -27,8 +27,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
-        {children}
-        <Footer />
+        <div className="mx-auto flex w-full max-w-[1440px] flex-1 flex-col">
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
