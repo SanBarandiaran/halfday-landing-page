@@ -15,8 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Halfday — Stop undercharging",
-  description: "The day rate app for freelancers. Work out what to charge in under a minute.",
+  title: "Halfday | Day Rate App",
+  description: "Work out what to charge in under a minute.",
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
