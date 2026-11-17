@@ -10,7 +10,7 @@ export function Hero() {
       className={`${halfdayDisplayBold.variable} ${halfdayDisplayLight.variable} ${halfdayBody.variable} flex min-h-dvh w-full scroll-mt-20 flex-col items-center justify-center gap-10 bg-[#F0ECE3] px-6 pt-28 pb-4 sm:gap-12 sm:px-10 sm:pb-16 lg:gap-16 lg:pt-24`}
     >
       <div className="flex animate-[fade-up_0.7s_ease-out_both] flex-col items-center gap-6 text-center sm:gap-7">
-        <div className="flex rotate-[2deg] flex-wrap items-baseline justify-center gap-x-4 gap-y-1 sm:gap-x-6 lg:gap-x-8">
+        <h1 className="flex rotate-[2deg] flex-wrap items-baseline justify-center gap-x-4 gap-y-1 sm:gap-x-6 lg:gap-x-8">
           <span className="font-[family-name:var(--font-halfday-display-bold)] text-[52px] leading-[1.2] font-bold text-black sm:text-[84px] lg:text-[128px]">
             STOP
           </span>
@@ -22,7 +22,7 @@ export function Hero() {
               CHARGING
             </span>
           </span>
-        </div>
+        </h1>
 
         <div className="flex flex-col items-center gap-3 sm:gap-4">
           <div className="flex rotate-[1deg] flex-wrap items-center justify-center gap-x-2 gap-y-2 sm:gap-x-3">

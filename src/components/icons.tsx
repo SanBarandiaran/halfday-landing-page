@@ -8,6 +8,7 @@ export function CalculatorGlyphIcon(props: SVGProps<SVGSVGElement>) {
       height="84"
       viewBox="0 0 84 84"
       fill="none"
+      aria-hidden="true"
       {...props}
     >
       <path
@@ -42,6 +43,7 @@ export function LightningIcon(props: SVGProps<SVGSVGElement>) {
       height="90"
       viewBox="0 0 90 90"
       fill="none"
+      aria-hidden="true"
       {...props}
     >
       <path
@@ -63,6 +65,7 @@ export function RocketIcon(props: SVGProps<SVGSVGElement>) {
       height="96"
       viewBox="0 0 96 96"
       fill="none"
+      aria-hidden="true"
       {...props}
     >
       <path
@@ -86,6 +89,7 @@ export function LinkIcon(props: SVGProps<SVGSVGElement>) {
       height="58"
       viewBox="0 0 58 58"
       fill="none"
+      aria-hidden="true"
       {...props}
     >
       <path
@@ -107,6 +111,7 @@ export function ArrowRightIcon(props: SVGProps<SVGSVGElement>) {
       height="48"
       viewBox="0 0 48 48"
       fill="none"
+      aria-hidden="true"
       {...props}
     >
       <path d="M10 24h28" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
@@ -124,6 +129,7 @@ export function PercentCutIcon(props: SVGProps<SVGSVGElement>) {
       height="72"
       viewBox="0 0 72 72"
       fill="none"
+      aria-hidden="true"
       {...props}
     >
       <path d="M48 51a3 3 90 1 0 6 0 3 3 90 1 0-6 0" stroke="#FF2ED1" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
@@ -141,6 +147,7 @@ export function SquiggleIcon(props: SVGProps<SVGSVGElement>) {
       height="74"
       viewBox="0 0 74 74"
       fill="none"
+      aria-hidden="true"
       {...props}
     >
       <path
@@ -162,6 +169,7 @@ export function MenuIcon(props: SVGProps<SVGSVGElement>) {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
+      aria-hidden="true"
       {...props}
     >
       <path d="M4 7h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -179,6 +187,7 @@ export function CloseIcon(props: SVGProps<SVGSVGElement>) {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
+      aria-hidden="true"
       {...props}
     >
       <path d="M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

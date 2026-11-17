@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Halfday",
+  title: "Privacy Policy | Halfday",
   description: "How Halfday collects, uses, and protects your information.",
 };
 

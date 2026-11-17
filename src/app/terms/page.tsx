@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions - Halfday",
+  title: "Terms & Conditions | Halfday",
   description: "The terms that govern your use of Halfday.",
 };
 

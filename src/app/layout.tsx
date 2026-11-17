@@ -15,8 +15,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://halfday-landing-page.vercel.app"),
   title: "Halfday | Day Rate App",
   description: "Work out what to charge in under a minute.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Halfday | Day Rate App",
+    description: "Work out what to charge in under a minute.",
+    url: "/",
+    siteName: "Halfday",
+    type: "website",
+    locale: "en_US",
+  },
   twitter: {
     card: "summary_large_image",
   },
